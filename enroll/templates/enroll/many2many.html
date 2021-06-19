@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Many to Many relationship model</title>
+    <style>
+        .table,th,tr,td{
+            border:1px solid black
+        }
+    </style>
+</head>
+<body><a href="{% url 'home' %}">Home</a>
+    <h2>Many to Many relationship model</h2>
+    <table><h2>All data</h2>
+        <th>Song Name</th>
+        <th>Written By</th>
+        <th>Song Duration</th>
+        {% for d in dataall %}
+        <tr>
+            <td>{{d.song_name}}</td>
+            <td>{{d.user}}</td>
+            <td>{{d.song_duration}}</td>
+        </tr>
+        {% endfor%}
+    </table><hr>
+    <table><h2>Filter by Song Name Tera Hone</h2>
+        <th>Song Name</th>
+        <th>Written By</th>
+        <th>Song Duration</th>
+        {% for d in data1 %}
+        <tr>
+            <td>{{d.song_name}}</td>
+            <td>{{d.user}}</td>
+            <td>{{d.song_duration}}</td>
+        </tr>
+        {% endfor%}
+    </table><hr>
+    <table><h2>Filter by Song Duration 8 mins</h2>
+        <th>Song Name</th>
+        <th>Written By</th>
+        <th>Song Duration</th>
+        {% for d in data3 %}
+        <tr>
+            <td>{{d.song_name}}</td>
+            <td>{{d.user}}</td>
+            <td>{{d.song_duration}}</td>
+        </tr>
+        {% endfor%}
+    </table><hr>
+</body>
+</html>

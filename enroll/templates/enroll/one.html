@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One to One relationship model</title>
+    <style>
+        .table,th,tr,td{
+            border:1px solid black
+        }
+    </style>
+</head>
+<body><a href="{% url 'home' %}">Home</a>
+    <h2>One to One relationship model</h2>
+    <table><h2>All data</h2>
+        <th>User</th>
+        <th>Page Title</th>
+        <th>Page Category</th>
+        <th>Publish Date</th>
+        {% for d in dataall %}
+        <tr>
+            <td>{{d.user}}</td>
+            <td>{{d.page_title}}</td>
+            <td>{{d.page_cat}}</td>
+            <td>{{d.publish_date}}</td>
+        </tr>
+        {% endfor%}
+    </table><hr>
+    <table><h2>Data By Title</h2>
+        <th>User</th>
+        <th>Page Title</th>
+        <th>Page Category</th>
+        <th>Publish Date</th>
+        {% for d in data1 %}
+        <tr>
+            <td>{{d.user}}</td>
+            <td>{{d.page_title}}</td>
+            <td>{{d.page_cat}}</td>
+            <td>{{d.publish_date}}</td>
+        </tr>
+        {% endfor%}
+    </table><hr>
+    <table><h2>Data By Publish Date</h2>
+        <th>User</th>
+        <th>Page Title</th>
+        <th>Page Category</th>
+        <th>Publish Date</th>
+        {% for d in data2 %}
+        <tr>
+            <td>{{d.user}}</td>
+            <td>{{d.page_title}}</td>
+            <td>{{d.page_cat}}</td>
+            <td>{{d.publish_date}}</td>
+        </tr>
+        {% endfor%}
+    </table><hr>
+    <table><h2>Data By Page Category</h2>
+        <th>User</th>
+        <th>Page Title</th>
+        <th>Page Category</th>
+        <th>Publish Date</th>
+        {% for d in data3 %}
+        <tr>
+            <td>{{d.user}}</td>
+            <td>{{d.page_title}}</td>
+            <td>{{d.page_cat}}</td>
+            <td>{{d.publish_date}}</td>
+        </tr>
+        {% endfor%}
+    </table><hr>
+</body>
+</html>

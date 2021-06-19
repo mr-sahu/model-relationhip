@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body{
+            padding:10x;
+        }
+        a{
+            padding:20x;
+            margin:20x;
+            background-color: red;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <a href="{% url 'one' %}">One to one relationship</a><br>
+    <a href="{% url 'many21' %}">Many to one relationship</a><br>
+    <a href="{% url 'many2many' %}">Many to Many relationship</a><br>
+    <a href="{% url 'user' %}">User</a>
+</body>
+</html>
